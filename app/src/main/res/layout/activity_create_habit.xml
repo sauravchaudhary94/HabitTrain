@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateHabitActivity"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"/>
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:hint="@string/description"/>
+
+
+
+    <Button
+        android:id="@+id/btn_selectimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chooseImage"
+        android:text="@string/select_image" />
+
+    <ImageView
+        android:id="@+id/preview_image"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/preview_image"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:onClick="storeHabit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"/>
+
+    <TextView
+        android:id="@+id/tv_errormessage"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_message"
+        android:textColor="#B00020"/>
+
+
+
+
+
+</LinearLayout>
